@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PlayerTrigger
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Suimono_Water
   - Suimono_Depth
   - Suimono_Screen
-  - 
+  - character arms
   - 
   - 
   - 
