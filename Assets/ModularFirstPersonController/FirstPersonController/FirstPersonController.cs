@@ -17,6 +17,7 @@ using UnityEngine.UI;
 public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
+    private Animator animator;
 
     #region Camera Movement Variables
 
@@ -151,7 +152,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
+        animator = GetComponentInChildren<Animator>();
+        if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -196,6 +198,7 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #endregion
+        
     }
 
     float camRotation;
@@ -362,6 +365,10 @@ public class FirstPersonController : MonoBehaviour
         {
             HeadBob();
         }
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+        float currentSpeed = flatVel.magnitude;
+
+        animator.SetFloat("speed", currentSpeed);
     }
 
     void FixedUpdate()
