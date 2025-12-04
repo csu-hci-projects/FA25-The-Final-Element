@@ -20,8 +20,8 @@ TagManager:
   - Suimono_Depth
   - Suimono_Screen
   - character arms
-  - 
-  - 
+  - Wire_minigame
+  - ending1
   - 
   - 
   - 
@@ -41,8 +41,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 1037868215
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: endingmessage
+    uniqueID: 280397375
     locked: 0
   m_RenderingLayers:
   - Default
