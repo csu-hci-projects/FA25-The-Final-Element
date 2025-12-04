@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0ebe585c5d284459a556da43b3508b, type: 3}
+  m_Name: Beach_note_2
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  noteID: beach_note_2
+  noteTitle: Escape Pod Repair Blueprint
+  noteContent: "Author: Department of Field Logistics\r\n\r\nEmergency Repair Procedure
+    \u2014 R-POD 74C\r\n\r\nTo restore minimal launch capability, the following standard
+    Earth-grade components must be replaced:\r\n\r\nConductive alloy plates (Fe\u2013Cu
+    composite)\r\n\r\nStabilizer gel for vibration control\r\n\r\nMicro-capacitor
+    units for ignition sequencing\r\n\r\nReinforced carbon housing for structural
+    integrity\r\n\r\nField technicians are advised to source equivalent materials
+    from the environment if official components are unavailable. Identify and extract
+    materials exhibiting comparable conductivity, density, and carbon structure.
+    A complete Element Translation Chart is included in the main operations manual
+    for reference.\r\n\r\nNote: Launch performance depends on accuracy of material
+    matching. Nonstandard substitutions may affect stability.\r\n"
+  noteImage: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  category: 2
