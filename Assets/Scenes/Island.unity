@@ -119,6 +119,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13894454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13894455}
+  - component: {fileID: 13894456}
+  m_Layer: 0
+  m_Name: GrasslandAmbientZone2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13894455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13894454}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 106.90791, y: 2.7999992, z: 113.43825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &13894456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13894454}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 336.08163, y: 14.88, z: 489.43024}
+  m_Center: {x: 93.03808, y: 0, z: 197.11484}
 --- !u!1 &14848939
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,9 +225,8 @@ GameObject:
   m_Component:
   - component: {fileID: 24468495}
   - component: {fileID: 24468493}
-  - component: {fileID: 24468494}
   m_Layer: 0
-  m_Name: 'Beach Area '
+  m_Name: 'BeachAmbientZone '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,20 +253,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 195.6398, y: 3.5, z: 63.95263}
   m_Center: {x: 26.944685, y: 0, z: 1.3264469}
---- !u!114 &24468494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24468492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0346fb793dcaa4a53b10133fde8c1a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  Area: {fileID: 0}
-  Player: {fileID: 0}
 --- !u!4 &24468495
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,35 +1148,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485991977}
-  - component: {fileID: 485991976}
   m_Layer: 0
-  m_Name: Grassland Area
+  m_Name: 'Grassland '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &485991976
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485991975}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 195.6398, y: 3.5, z: 63.95263}
-  m_Center: {x: 26.944685, y: 0, z: 1.3264469}
 --- !u!4 &485991977
 Transform:
   m_ObjectHideFlags: 0
@@ -1151,7 +1167,12 @@ Transform:
   m_LocalPosition: {x: 201.9, y: 21.74944, z: 194.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1811005508}
+  - {fileID: 2061363448}
+  - {fileID: 1165683276}
+  - {fileID: 13894455}
+  - {fileID: 1666922818}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 34.4, z: 0}
 --- !u!1 &579792472 stripped
@@ -1568,7 +1589,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4459864851508666808, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -1587,6 +1609,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1894733446}
+    - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1894733450}
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
 --- !u!1 &712985245 stripped
 GameObject:
@@ -2018,7 +2043,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6258991218409019183, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1459724376}
   m_SourcePrefab: {fileID: 100100000, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
 --- !u!4 &976549233 stripped
 Transform:
@@ -2106,6 +2134,60 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1033131786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033131788}
+  - component: {fileID: 1033131787}
+  m_Layer: 0
+  m_Name: FootAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1033131787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033131786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e46fd72695a48009128f56aeecd5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  FootstepEvent:
+    Guid:
+      Data1: 1232420582
+      Data2: 1144667125
+      Data3: 1523071151
+      Data4: -1347990240
+    Path: event:/Footsteps
+  rate: 0.75
+  player: {fileID: 1894733442}
+  controller: {fileID: 1787643550}
+--- !u!4 &1033131788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033131786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 212.31319, y: 25.76591, z: 226.32083}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051173992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6774908253913030510, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -2192,6 +2274,93 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1271349325508305178, guid: fc8be291f044e7b4097a1c264c6635d4, type: 3}
+--- !u!1 &1081944101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081944102}
+  - component: {fileID: 1081944103}
+  m_Layer: 0
+  m_Name: BeachAmbiantZoneSPLINE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1081944102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081944101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -91.5, y: -1.64, z: 153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1857463305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081944103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081944101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePath
+  m_Resolution: 10
+  m_Appearance:
+    pathColor: {r: 0, g: 1, b: 0, a: 1}
+    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    width: 0.2
+  m_Looped: 1
+  m_Waypoints:
+  - position: {x: -10.209305, y: 0, z: 66.818634}
+    tangent: {x: -0.23080063, y: 0, z: 3.6290283}
+    roll: 0
+  - position: {x: -36.90969, y: 0, z: -27.651428}
+    tangent: {x: -4.7344666, y: 0.98160267, z: -11.328766}
+    roll: 0
+  - position: {x: -14.000511, y: 0.98160267, z: -122.36154}
+    tangent: {x: 13.838387, y: 0.9816017, z: -10.1197815}
+    roll: 0
+  - position: {x: 54.904816, y: 1.9632044, z: -218.78561}
+    tangent: {x: 22.143753, y: 0.9816017, z: -12.138184}
+    roll: 0
+  - position: {x: 178.09781, y: 2.944806, z: -275.06342}
+    tangent: {x: 28.602966, y: 0.9816017, z: -2.2124634}
+    roll: 0
+  - position: {x: 400.12064, y: 3.9264078, z: -276.40363}
+    tangent: {x: 28.602966, y: 0.9816017, z: -2.2124634}
+    roll: 0
+  - position: {x: 334.59, y: 4.9080095, z: -222.26678}
+    tangent: {x: 3.5681152, y: 0.9816017, z: 2.694336}
+    roll: 0
+  - position: {x: 283.5434, y: 5.3988104, z: -233.34335}
+    tangent: {x: -0.99994576, y: 0, z: -0.010415346}
+    roll: 0
+  - position: {x: 166.28296, y: 5.8896112, z: -217.9338}
+    tangent: {x: -21.416779, y: 0.9816017, z: 9.291855}
+    roll: 0
+  - position: {x: 51.857407, y: 6.871213, z: -151.25339}
+    tangent: {x: -39.996063, y: 0.9816017, z: 73.61252}
+    roll: 0
+  - position: {x: 12.067749, y: 7.8528147, z: -64.3728}
+    tangent: {x: -16.216362, y: 0.9816017, z: 41.589447}
+    roll: 0
+  - position: {x: 13.361595, y: 1.8427382, z: 59.012054}
+    tangent: {x: -16.216362, y: 0.9816017, z: 41.589447}
+    roll: 0
 --- !u!1 &1129962708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,6 +2820,59 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1308026797}
   m_SourcePrefab: {fileID: 100100000, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
+--- !u!1 &1165683274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165683276}
+  - component: {fileID: 1165683275}
+  m_Layer: 0
+  m_Name: GrasslandAmbientZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1165683275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165683274}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 162.4353, y: 14.88, z: 489.43024}
+  m_Center: {x: 6.2158165, y: 0, z: 197.11478}
+--- !u!4 &1165683276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165683274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.9, y: 2.8, z: 20.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209987824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,6 +3015,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 207.256, z: 0}
+--- !u!1 &1235000715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235000716}
+  - component: {fileID: 1235000718}
+  - component: {fileID: 1235000717}
+  m_Layer: 0
+  m_Name: AmbientZoneCartBeach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235000716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235000715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1857463305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1235000717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235000715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1592929247
+      Data2: 1171910985
+      Data3: -665397855
+      Data4: -602464984
+    Path: event:/Beach
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1235000718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235000715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34dbe0d2bcc734a219f283567ad0b883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cinemachine.AmbientZone
+  m_Path: {fileID: 1081944103}
+  Player: {fileID: 1894733442}
 --- !u!1 &1260499793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,11 +3141,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1592929247
+      Data2: 1171910985
+      Data3: -665397855
+      Data4: -602464984
+    Path: event:/Beach
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -2855,8 +3155,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1260499796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2870,7 +3170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ambiance
   Area: {fileID: 24468493}
-  Player: {fileID: 0}
+  Player: {fileID: 1894733442}
 --- !u!1 &1296195879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6453533764971325562, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -3283,6 +3583,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1672470737421723186, guid: fc8be291f044e7b4097a1c264c6635d4, type: 3}
+--- !u!1 &1459724372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6258991218409019183, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
+  m_PrefabInstance: {fileID: 976549232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1459724376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459724372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -327128085
+      Data2: 1233182922
+      Data3: 1773384364
+      Data4: 1197510187
+    Path: event:/Fire
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 40
 --- !u!1001 &1476060733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3616,6 +3952,84 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7935879370738473762, guid: e46b6961fc3ebd84f94ae7087091f96f, type: 3}
   m_PrefabInstance: {fileID: 6545114301730303685}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1666922817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1666922818}
+  - component: {fileID: 1666922820}
+  - component: {fileID: 1666922819}
+  m_Layer: 0
+  m_Name: Forest Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1666922818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666922817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666922819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666922817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 926830273
+      Data2: 1243621657
+      Data3: -199523662
+      Data4: -829548119
+    Path: event:/Forest
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1666922820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666922817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0346fb793dcaa4a53b10133fde8c1a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ambiance
+  Area: {fileID: 1165683275}
+  Player: {fileID: 1894733442}
 --- !u!1 &1673298328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5832274218699194026, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -3926,6 +4340,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9581a56935d04a641b1bda839b642a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnManager
+--- !u!114 &1787643550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 700019143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075255882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90ba6530d9bfda47abb4610956b2f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1797654825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4031,6 +4456,165 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4862295356554235900, guid: fc8be291f044e7b4097a1c264c6635d4, type: 3}
+--- !u!1 &1811005505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1811005508}
+  - component: {fileID: 1811005506}
+  - component: {fileID: 1811005507}
+  - component: {fileID: 1811005509}
+  m_Layer: 0
+  m_Name: GrasslandAmbientZoneSPLINE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1811005506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811005505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePath
+  m_Resolution: 20
+  m_Appearance:
+    pathColor: {r: 0, g: 1, b: 0, a: 1}
+    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    width: 0.2
+  m_Looped: 1
+  m_Waypoints:
+  - position: {x: 0, y: 0, z: -5}
+    tangent: {x: 1, y: 0, z: 0}
+    roll: 0
+  - position: {x: 47.87601, y: -0.76472664, z: -68.85244}
+    tangent: {x: 3.9194489, y: 0, z: -21.057365}
+    roll: 0
+  - position: {x: 147.76147, y: -0.76472664, z: -151.61096}
+    tangent: {x: 15.924896, y: 0, z: -4.4806976}
+    roll: 0
+  - position: {x: 199.85962, y: -0.76472664, z: -168.08015}
+    tangent: {x: 21.74884, y: 0, z: 0.9965515}
+    roll: 0
+  - position: {x: 321.22217, y: -0.76472664, z: -123.07167}
+    tangent: {x: 23.033783, y: 0, z: 17.792519}
+    roll: 0
+  - position: {x: 419.35712, y: -0.76472664, z: -54.089108}
+    tangent: {x: 28.492065, y: 0, z: 13.569969}
+    roll: 0
+  - position: {x: 544.2886, y: -0.76472664, z: -28.990839}
+    tangent: {x: 24.484253, y: 0, z: 39.63775}
+    roll: 0
+  - position: {x: 582.0007, y: -0.76472664, z: 32.83409}
+    tangent: {x: 24.484253, y: 0, z: 39.63775}
+    roll: 0
+  - position: {x: 723.8933, y: -0.76472664, z: 67.30333}
+    tangent: {x: 24.21051, y: 0, z: 55.40909}
+    roll: 0
+  - position: {x: 815.076, y: -0.76472664, z: 276.26895}
+    tangent: {x: -71.74231, y: 0, z: 135.78247}
+    roll: 0
+  - position: {x: 651.5299, y: -0.76472664, z: 511.71344}
+    tangent: {x: -23.073853, y: 0, z: 22.97992}
+    roll: 0
+  - position: {x: 446.28882, y: -0.76472664, z: 804.19104}
+    tangent: {x: -50.207245, y: 0, z: 15.74408}
+    roll: 0
+  - position: {x: 211.34915, y: -0.76472664, z: 802.2642}
+    tangent: {x: -52.6604, y: 0, z: -40.3869}
+    roll: 0
+  - position: {x: -134.30533, y: -0.76472664, z: 532.92505}
+    tangent: {x: -52.6604, y: 0, z: -40.3869}
+    roll: 0
+  - position: {x: -197.08192, y: -0.76472664, z: 357.94867}
+    tangent: {x: -27.327545, y: 0, z: -66.18088}
+    roll: 0
+  - position: {x: -181.0424, y: -0.76472664, z: 208.49776}
+    tangent: {x: 18.142654, y: -30.985138, z: -66.18089}
+    roll: 0
+  - position: {x: -227.88396, y: -31.749865, z: 121.8931}
+    tangent: {x: 18.142654, y: -30.985138, z: -66.18089}
+    roll: 0
+  - position: {x: -41.097527, y: -62.735, z: 74.38037}
+    tangent: {x: 78.354965, y: -30.985138, z: 10.508858}
+    roll: 0
+--- !u!114 &1811005507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811005505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 926830273
+      Data2: 1243621657
+      Data3: -199523662
+      Data4: -829548119
+    Path: event:/Forest
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1811005508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811005505}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -176.3, y: 0, z: 124.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1811005509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811005505}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1824560764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4142,6 +4726,8 @@ Transform:
   - {fileID: 24468495}
   - {fileID: 1260499794}
   - {fileID: 853624049}
+  - {fileID: 1081944102}
+  - {fileID: 1235000716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1870108606 stripped
@@ -5238,6 +5824,20 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   m_PrefabInstance: {fileID: 700019143}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1894733450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894733442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1001 &1901357185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5409,6 +6009,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8736915626380737205, guid: fc36ff9abb0e635499730e9da44b4a95, type: 3}
   m_PrefabInstance: {fileID: 2018571979}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2061363447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061363448}
+  - component: {fileID: 2061363449}
+  m_Layer: 0
+  m_Name: AmientZoneCartGrassland
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2061363448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061363447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061363449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061363447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34dbe0d2bcc734a219f283567ad0b883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cinemachine.AmbientZone
+  m_Path: {fileID: 1811005506}
+  Player: {fileID: 1894733442}
 --- !u!1001 &1404227305352297975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6027,3 +6673,4 @@ SceneRoots:
   - {fileID: 6288649603836045534}
   - {fileID: 1877606476}
   - {fileID: 1224329451}
+  - {fileID: 1033131788}
