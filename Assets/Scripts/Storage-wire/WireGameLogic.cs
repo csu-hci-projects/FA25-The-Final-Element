@@ -9,6 +9,8 @@ public class WireGameLogic : MonoBehaviour
     public GameObject endMessage;
     public GameObject endMessage2;
 
+
+    
     void Start()
     {
         ShuffleWires();
@@ -18,6 +20,7 @@ public class WireGameLogic : MonoBehaviour
     {
         int connectedCount = 0;
         bool allCorrect = true;
+
 
         foreach (Wire w in wires)
         {

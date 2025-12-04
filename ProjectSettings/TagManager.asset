@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - PlayerTrigger
+  - Obstacle
+  - Scoring
   layers:
   - Default
   - TransparentFX
@@ -13,13 +15,13 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - OfficeMinigame
   - Suimono_Water
   - Suimono_Depth
   - Suimono_Screen
   - character arms
-  - 
-  - 
+  - Wire_minigame
+  - ending1
   - 
   - 
   - 
