@@ -592,6 +592,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Orb
   gravity: -9.8
   strength: 5
+  OrbEvent:
+    Guid:
+      Data1: 1351966523
+      Data2: 1096407389
+      Data3: -758103157
+      Data4: 1551795587
+    Path: event:/Ball Bounce
+  player: {fileID: 485007984}
 --- !u!58 &171172948
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1268,6 +1276,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &485007984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4060255946888844991, guid: 0f8b8d9de335c4c70903b2ab3e9e74bc, type: 3}
+  m_PrefabInstance: {fileID: 1950626275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &489764727 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6358943600705213946, guid: 77921a131cbaefb4f82237e8942f5f07, type: 3}
@@ -1746,6 +1759,60 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &641636277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641636279}
+  - component: {fileID: 641636278}
+  m_Layer: 0
+  m_Name: FootstepsAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &641636278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641636277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1417b656a3c6c4b7e84418ec5702d326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootstepsAudioManager
+  FootstepEvent:
+    Guid:
+      Data1: -1934153245
+      Data2: 1110994483
+      Data3: 1638977416
+      Data4: -1323048976
+    Path: event:/FootstepsTile
+  rate: 0.75
+  player: {fileID: 485007984}
+  controller: {fileID: 1950626279}
+--- !u!4 &641636279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641636277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5, y: 0.24, z: -0.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647625578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2834,21 @@ MonoBehaviour:
   gameOver: {fileID: 1070788193}
   verificationUI: {fileID: 657572391}
   minigameActive: 0
+  LooseEvent:
+    Guid:
+      Data1: -1542975804
+      Data2: 1223720775
+      Data3: -305843274
+      Data4: 1455418045
+    Path: event:/Loose
+  WinEvent:
+    Guid:
+      Data1: 861268920
+      Data2: 1123810653
+      Data3: 1077399689
+      Data4: 1297034943
+    Path: event:/Win
+  player: {fileID: 485007984}
 --- !u!1 &911165098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6358943600705213946, guid: 77921a131cbaefb4f82237e8942f5f07, type: 3}
@@ -7630,3 +7712,4 @@ SceneRoots:
   - {fileID: 579153815}
   - {fileID: 509176714}
   - {fileID: 2111835769}
+  - {fileID: 641636279}

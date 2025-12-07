@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class Orb : MonoBehaviour
 {
@@ -6,6 +7,12 @@ public class Orb : MonoBehaviour
     public float gravity = -9.8f;
     public float strength = 5f;
 
+    [SerializeField] EventReference OrbEvent;
+    [SerializeField] GameObject player;
+    public void PlayOrbSound()
+    {
+        RuntimeManager.PlayOneShotAttached(OrbEvent, player);
+    }
     private void OnEnable()
     {
         Vector3 position = transform.position;
@@ -20,6 +27,7 @@ public class Orb : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             direction = Vector3.up * strength;
+            PlayOrbSound();
         }
 
         // Apply gravity

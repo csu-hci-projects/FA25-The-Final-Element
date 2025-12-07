@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,18 @@ public class GameManager : MonoBehaviour
     private int score;
     private bool reached17 = false;   // <--- Only tracks whether score hit 17
 
+    [SerializeField] EventReference LooseEvent;
+    [SerializeField] EventReference WinEvent;
+    [SerializeField] GameObject player;
+    public void PlayLooseSound()
+    {
+        RuntimeManager.PlayOneShotAttached(LooseEvent, player);
+    }
+
+    public void PlayWinSound()
+    {
+        RuntimeManager.PlayOneShotAttached(WinEvent, player);
+    }
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -98,11 +111,14 @@ public class GameManager : MonoBehaviour
 
             // Lock minigame so escape/start no longer work
             minigameActive = false;
+            PlayWinSound();
+
             return;
         }
 
         // NORMAL GAME OVER
         gameOver.SetActive(true);
         playButton.SetActive(true);
+        PlayLooseSound();
     }
 }
