@@ -14,16 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: beach_note_2
   noteTitle: Escape Pod Repair Blueprint
-  noteContent: "Author: Department of Field Logistics\r\n\r\nEmergency Repair Procedure
-    \u2014 R-POD 74C\r\n\r\nTo restore minimal launch capability, the following standard
-    Earth-grade components must be replaced:\r\n\r\nConductive alloy plates (Fe\u2013Cu
-    composite)\r\n\r\nStabilizer gel for vibration control\r\n\r\nMicro-capacitor
-    units for ignition sequencing\r\n\r\nReinforced carbon housing for structural
-    integrity\r\n\r\nField technicians are advised to source equivalent materials
-    from the environment if official components are unavailable. Identify and extract
-    materials exhibiting comparable conductivity, density, and carbon structure.
-    A complete Element Translation Chart is included in the main operations manual
-    for reference.\r\n\r\nNote: Launch performance depends on accuracy of material
-    matching. Nonstandard substitutions may affect stability.\r\n"
+  noteContent: "Author: Department of Field Logistics\n\nTo restore basic launch
+    capability to the R-POD 74C escape unit, the following Earth-standard components
+    must be replaced:\n\n\t-Conductive alloy plates (iron/copper mix): manage electrical
+    flow across hull panels.\n\t-Stabilizer gel: prevents catastrophic vibration
+    during ignition.\n\t-Micro-capacitor ignition units: store and release the burst
+    of power needed for liftoff.\n\t-Reinforced carbon housing panels: maintain internal
+    pressure and structure during ascent.\n\nIf standard replacements are not available,
+    field personnel may attempt to locate natural materials with similar behavior.
+    Identification should be based on practical traits:\n\t-Does it conduct electricity
+    like metal?\n\t-Is it strong under pressure like carbon composites?\n\t-Does
+    it hold a charge?\n\t-Does it tolerate high heat or impact?\n\nThe Element Translation
+    Chart (Operations Manual Section 3A) lists the physical properties required for
+    each component. Field agents are instructed to compare unknown materials against
+    these parameters to determine potential compatibility.\n\nWarning: substitutes
+    may only function for a short duration. Stability varies, and incorrect matches
+    could result in engine failure or hull breach during launch.\n\nUse only if no
+    certified parts are available."
   noteImage: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   category: 2
+  innerDialogueAfterClose: "Conductive plates, stabilizer gel, carbon panels\u2026
+    If the island has substitutes that match these, I might actually get the pod
+    running again. First step: find the materials."

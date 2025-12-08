@@ -14,10 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Office_Note_3
   noteTitle: Scanner Access Log (Day 8)
-  noteContent: "Author: Technician Jonah Reyes\r\n\r\nBiometric scanner short-circuited
-    again after Composite-0 interference. Until we get consistent readings, door
-    access will rely on the reflex-verification system. Only a precise performance
-    score of 17 resets the lock. Any other value is rejected.\r\n\r\nAvoid overcorrecting
-    \u2014 the system is annoyingly literal. \r\n"
+  noteContent: "Author: Technician Jonah Reyes\n\nThe biometric lock for the laboratory
+    door failed again this morning. Composite-0 growth spread across the scanner
+    housing overnight, causing short circuits and corrupting the calibration software.
+    Even after we cleaned the growth, the system refused to recognize authorized
+    staff.\n\nUntil we find a permanent fix, door access will rely on the reflex-verification
+    system we installed as a backup. In short: the door opens only when someone hits
+    the exact target score\u201417\u2014on the reflex test panel. Anything else resets
+    the counter and locks the door again.\n\nIt\u2019s not elegant, but it works\u2026
+    mostly. The system is extremely literal. Undershoot or overshoot the score by
+    even a fraction and it rejects the attempt.\n\nNot ideal for a research facility,
+    but given the circumstances, we don\u2019t have many options left."
   noteImage: {fileID: 0}
   category: 0
+  innerDialogueAfterClose: "A reflex test to open a door? Must\u2019ve been desperate
+    for a backup.\nWhatever. If it gets me into the lab, I\u2019ll do it."

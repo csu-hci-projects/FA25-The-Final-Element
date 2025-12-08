@@ -8,6 +8,8 @@ public class OfficeMinigameInteraction : MonoBehaviour
     public GameManager gameManager;
     public GameObject promptUI;
 
+    public GameObject reticle;                 // <--- NEW: assign the Reticle here
+
     private bool playerInRange = false;
     private bool minigameOpen = false;
 
@@ -50,10 +52,14 @@ public class OfficeMinigameInteraction : MonoBehaviour
         if (movementScript != null)
             movementScript.enabled = false;
 
+        // Hide the crosshair
+        if (reticle != null)
+            reticle.SetActive(false);
+
         // Show minigame
         minigameRoot.SetActive(true);
 
-        // Unlock cursor to click UI
+        // Unlock cursor for UI
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -73,13 +79,17 @@ public class OfficeMinigameInteraction : MonoBehaviour
         // Hide minigame
         minigameRoot.SetActive(false);
 
-        // Restore position & rotation
+        // Restore player position & rotation
         playerController.transform.position = savedPosition;
         playerController.transform.rotation = savedRotation;
 
         // Re-enable movement
         if (movementScript != null)
             movementScript.enabled = true;
+
+        // Restore crosshair
+        if (reticle != null)
+            reticle.SetActive(true);
 
         // Lock cursor again
         Cursor.lockState = CursorLockMode.Locked;
