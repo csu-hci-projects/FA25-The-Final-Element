@@ -14,21 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Beach_note_1
   noteTitle: Field Observation Log (Day 1)
-  noteContent: 'Author: Dr. Mara Ishikawa
-
-
-
-    Initial landing confirms the island
-    exhibits extreme chemical anomalies. Flora maintains familiar silhouettes but
-    presents radically altered material composition. Tree trunks show teal mineral
-    seams instead of organic cellulose, and leaf tissues display deep red crystalline
-    structures that refract light in unusual patterns.
-
-
-
-    Soil samples include
-    multiple particulate compounds not found in any Earth database. Early theory:
-    the island supports formation of entirely novel matter that likely destabilizes
-    when removed from its native environment.'
+  noteContent: "Our initial landing confirms that this island does not follow any
+    familiar chemical or biological rules. At a distance, the environment looks ordinary\u2014trees,
+    grass, soil\u2014but up close, everything is built from materials we\u2019ve
+    never encountered.\n\nThe tree trunks are not organic at all. Instead of wood
+    fibers, they contain solid teal mineral seams running in branching patterns that
+    mimic veins. The leaves are thin red crystals that flex without breaking, almost
+    like a hybrid between glass and cartilage. When sunlight hits them, the crystals
+    bend and scatter light into strange angles, creating distorted shadows across
+    the ground.\n\nEven the soil refuses to match Earth samples. When we dug a small
+    trench, we found grains shaped like tiny gears and spirals, as if naturally formed
+    by mechanical processes rather than erosion. Their composition doesn\u2019t map
+    to any Earth element, and some of them behave oddly around our instruments\u2014slight
+    magnetic interference, unexplained warmth, or sudden density shifts.\n\nEarly
+    theory: the island creates new matter within its boundaries. These materials
+    seem stable only while they remain here, suggesting the environment itself is
+    holding them together.\n\nWhatever is happening here, it isn\u2019t natural.
+    And it\u2019s much larger than we expected."
   noteImage: {fileID: 21300000, guid: c25098fb5033608418f3312973d3029c, type: 3}
   category: 1
+  innerDialogueAfterClose: "Teal bark, red crystal leaves\u2026 nothing here feels
+    real. The scientists weren\u2019t exaggerating\u2014this place follows its own
+    rules.\nI just need to get what I came for, fix the pod, and leave."

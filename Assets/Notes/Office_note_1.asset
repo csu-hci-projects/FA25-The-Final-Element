@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Office_note_1
   noteTitle: Field Lab Overview (Day 3)
-  noteContent: 'Author: Dr. Selene Hart
-
-
-
-    Early laboratory analysis reveals
-    that several island materials behave similarly to Earth elements despite having
-    entirely foreign compositions. A metallic sample conducted electricity almost
-    identically to copper, while another reinforced framing tests like low-grade
-    iron. Even a brittle crystalline form demonstrated bonding behavior reminiscent
-    of carbon structures.
-
-
-
-    These substitutes appear naturally occurring and
-    surprisingly consistent, though their broader effects remain unknown.'
+  noteContent: "Author: Dr. Selene Hart\n\nOur first round of lab tests confirms
+    that many island materials behave like strangely altered versions of Earth elements.
+    For example, one metallic shard pulled from a collapsed tree conducted electricity
+    nearly identical to copper, even though its surface structure resembled nothing
+    metallic at all. Another sample\u2014bright gray and flaky\u2014reinforced structural
+    beams during stress testing almost exactly like low-grade iron.\n\nEven more
+    surprising was a brittle red crystal that bonded to itself when exposed to mild
+    heat, mimicking carbon-based adhesive reactions. These properties repeat across
+    samples taken from opposite ends of the island, which suggests these \u201Csubstitutes\u201D
+    are naturally occurring rather than rare anomalies.\n\nThe most concerning trend
+    is consistency. Materials with copper-like behavior always conduct like copper.
+    Materials with iron-like behavior always strengthen under pressure. None of these
+    samples vary in their role, even if their structure and appearance change.\n\nIt\u2019s
+    becoming clear that the island is generating entire families of materials designed
+    to fill specific chemical functions. We expected unpredictable chaos\u2014but
+    instead, we\u2019re finding something disturbingly organized."
   noteImage: {fileID: 21300000, guid: e66c70fb401dc3043805f73e58430c24, type: 3}
   category: 0
+  innerDialogueAfterClose: "They act just like copper, iron, carbon\u2026 but look
+    nothing like them.\nIf the substitutes really work, maybe I can pull this off.
+    The pod repairs might not be impossible after all."

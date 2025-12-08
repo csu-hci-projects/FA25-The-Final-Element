@@ -14,12 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Office_note_2
   noteTitle: Element Stability Review (Day 5)
-  noteContent: "Author: Dr. Elias Morrow\r\n\r\nTests confirm that substitute materials
-    retain functional integrity only briefly outside the island\u2019s environmental
-    field. Despite initial compatibility with machinery circuits and diagnostic tools,
-    their structures degrade quickly the farther they get from the island\u2019s
-    influence.\r\n\r\nIt suggests a dependency on local atmospheric or magnetic conditions
-    that we do not yet fully understand. Engineering applications are possible, but
-    time-limited."
+  noteContent: "Author: Dr. Elias Morrow\n\nStability remains the biggest challenge.
+    Every sample we remove from the immediate environment begins to degrade the moment
+    it leaves the island\u2019s atmospheric and magnetic field. Some weaken slowly\u2014losing
+    their structure over hours\u2014while others collapse within minutes. The degradation
+    patterns aren\u2019t uniform, but they\u2019re consistent enough to prove a dependency.\n\nBased
+    on controlled tests, the materials rely on something present in the island\u2019s
+    local conditions. It could be atmospheric composition, a magnetic anomaly, or
+    even a form of radiation we haven\u2019t identified yet. Whatever it is, the
+    materials lose coherence when separated from it.\n\nFor now, engineering applications
+    are technically possible, but extremely time-limited. A device built with these
+    substitutes would need to be assembled and activated on-site. Long-term transport
+    appears impossible.\n\nThis has forced us to rethink the original mission. We
+    came to find replacements\u2014something we could extract and take home. But
+    the more we work, the clearer it becomes: the island isn\u2019t offering replacements.
+    It\u2019s creating dependencies."
   noteImage: {fileID: 0}
   category: 0
+  innerDialogueAfterClose: "So the materials break down if they\u2019re taken too
+    far away\u2026\nThat means the escape window would be small\u2014too small, maybe.
+    But I have to try."

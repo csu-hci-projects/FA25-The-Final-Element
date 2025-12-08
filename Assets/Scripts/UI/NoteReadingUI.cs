@@ -14,6 +14,8 @@ public class NoteReadingUI : MonoBehaviour
     [Header("Styling")]
     [SerializeField] private Color paperColor = new Color(0.95f, 0.93f, 0.85f);
 
+    private NoteData currentNote;   // <--- store the note being read
+
     private void Start()
     {
         if (closeButton != null)
@@ -24,6 +26,8 @@ public class NoteReadingUI : MonoBehaviour
 
     public void DisplayNote(NoteData note)
     {
+        currentNote = note; // remember which note is open
+
         titleText.text = note.noteTitle;
         contentText.text = note.noteContent;
 
@@ -31,6 +35,7 @@ public class NoteReadingUI : MonoBehaviour
         if (note.noteImage != null)
         {
             if (imageContainer != null) imageContainer.SetActive(true);
+
             if (noteImage != null)
             {
                 noteImage.gameObject.SetActive(true);
@@ -51,6 +56,14 @@ public class NoteReadingUI : MonoBehaviour
 
     private void CloseNote()
     {
+        // 🔥 Trigger inner dialogue if this note has one
+        if (currentNote != null &&
+            !string.IsNullOrEmpty(currentNote.innerDialogueAfterClose))
+        {
+            DialogueUI.Instance.ShowMessage(currentNote.innerDialogueAfterClose);
+        }
+
+        // Continue normal closing behavior
         NoteManager.Instance.CloseNoteReading();
     }
 

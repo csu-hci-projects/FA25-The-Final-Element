@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 using FMODUnity;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,11 +16,17 @@ public class GameManager : MonoBehaviour
     public bool minigameActive = false;
 
     private int score;
-    private bool reached17 = false;   // <--- Only tracks whether score hit 17
+    private bool reached17 = false;
 
+    [Header("Audio")]
     [SerializeField] EventReference LooseEvent;
     [SerializeField] EventReference WinEvent;
     [SerializeField] GameObject player;
+
+    [Header("Success Teleport")]
+    public float teleportDelay = 2f;   // delay before teleporting
+    private string nextSceneName = "LabRoom";   // <-- hardcoded since you confirmed name
+
     public void PlayLooseSound()
     {
         RuntimeManager.PlayOneShotAttached(LooseEvent, player);
@@ -28,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShotAttached(WinEvent, player);
     }
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -47,8 +56,7 @@ public class GameManager : MonoBehaviour
             return;
 
         score = 0;
-        reached17 = false;   // RESET FLAG
-
+        reached17 = false;
         scoreText.text = "0";
 
         playButton.SetActive(false);
@@ -58,6 +66,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         orb.enabled = true;
 
+        // Remove old pipes
         Pipes[] pipes = FindObjectsOfType<Pipes>();
         for (int i = 0; i < pipes.Length; i++)
             Destroy(pipes[i].gameObject);
@@ -80,14 +89,14 @@ public class GameManager : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
 
-        // HARD FAIL at 50
+        // Hard fail
         if (score >= 50)
         {
             GameOver();
             return;
         }
 
-        // Player has hit exactly 17
+        // Mark that we reached 17
         if (score == 17)
         {
             reached17 = true;
@@ -101,24 +110,29 @@ public class GameManager : MonoBehaviour
 
         Pause();
 
-        // SUCCESS CONDITION → CRASH + EXACTLY 17 REACHED EARLIER
+        // SUCCESS = crash with score 17 AFTER having reached 17
         if (reached17 && score == 17)
         {
             playButton.SetActive(false);
             gameOver.SetActive(false);
+            verificationUI.SetActive(true);
 
-            verificationUI.SetActive(true); // SHOW "Verification Confirmed"
-
-            // Lock minigame so escape/start no longer work
-            minigameActive = false;
+            minigameActive = false;   // lock out escape and restart
             PlayWinSound();
 
+            StartCoroutine(TeleportAfterDelay());
             return;
         }
 
-        // NORMAL GAME OVER
+        // NORMAL FAILURE
         gameOver.SetActive(true);
         playButton.SetActive(true);
         PlayLooseSound();
+    }
+
+    private IEnumerator TeleportAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(teleportDelay);
+        SceneManager.LoadScene(nextSceneName);
     }
 }

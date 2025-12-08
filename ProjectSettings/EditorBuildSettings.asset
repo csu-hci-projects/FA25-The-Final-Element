@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main Menu V2.asset.unity
     guid: 5c1e59e461d764768ad1e23a09fc83ae
+  - enabled: 1
+    path: Assets/Scenes/LabRoom.unity
+    guid: abf95a76f40b9a64a8a29c88db0d2e9e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

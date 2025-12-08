@@ -14,12 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: beach_note_3
   noteTitle: Project Restoration Summary (Excerpt)
-  noteContent: "Author: Central Resource Preservation Initiative\r\n\r\nOngoing depletion
-    of Earth\u2019s natural elements has accelerated beyond projected curves. This
-    island was flagged because satellite readings detected unfamiliar material signatures
-    concentrated in its soil and vegetation. These anomalies showed potential as
-    functional replacements for critical Earth resources.\r\n\r\nThe stationed research
-    team was tasked with evaluating whether extraction or synthesis was possible.
-    Communication terminated unexpectedly five days ago."
+  noteContent: "Author: Central Resource Preservation Initiative\n\nOver the past
+    decade, Earth has entered an accelerated period of elemental depletion. Iron
+    mines are collapsing, copper reserves have thinned to fractions of former output,
+    and carbon-quality materials used in aerospace and medicine have declined rapidly.
+    Global infrastructure is approaching a tipping point.\n\nThis island became a
+    focus because long-range scanners detected something impossible\u2014materials
+    that looked functionally similar to those critical Earth elements, yet chemically
+    alien. These signatures repeated across multiple passes, suggesting the island
+    wasn\u2019t holding deposits\u2026 it was producing them.\n\nThe research team
+    deployed to investigate how these new materials formed, whether they could be
+    collected safely, and if they offered a sustainable replacement for Earth\u2019s
+    failing resources. Early logs suggested promising discoveries, including samples
+    that delivered near-perfect electrical performance.\n\nFive days ago, communications
+    stopped entirely. Final automated readings from the facility indicated shifting
+    magnetic patterns and rising environmental instability.\n\nWe still do not know
+    what happened to the team."
   noteImage: {fileID: 0}
   category: 3
+  innerDialogueAfterClose: "Element shortages worse than reported\u2026 so that\u2019s
+    why they rushed a team out here.\nIf these materials can replace what we\u2019re
+    losing, the entire world is riding on this place."
