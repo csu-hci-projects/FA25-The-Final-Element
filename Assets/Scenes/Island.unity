@@ -206,7 +206,6 @@ GameObject:
   m_Component:
   - component: {fileID: 24468495}
   - component: {fileID: 24468493}
-  - component: {fileID: 24468494}
   m_Layer: 0
   m_Name: 'Beach Area '
   m_TagString: Untagged
@@ -235,20 +234,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 195.6398, y: 3.5, z: 63.95263}
   m_Center: {x: 26.944685, y: 0, z: 1.3264469}
---- !u!114 &24468494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24468492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0346fb793dcaa4a53b10133fde8c1a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  Area: {fileID: 0}
-  Player: {fileID: 0}
 --- !u!4 &24468495
 Transform:
   m_ObjectHideFlags: 0
@@ -264,6 +249,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1857463305}
   m_LocalEulerAnglesHint: {x: 0, y: 34.4, z: 0}
+--- !u!1 &51428368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51428370}
+  - component: {fileID: 51428369}
+  m_Layer: 0
+  m_Name: FootstepsAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &51428369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51428368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1417b656a3c6c4b7e84418ec5702d326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  FootstepEvent:
+    Guid:
+      Data1: 1232420582
+      Data2: 1144667125
+      Data3: 1523071151
+      Data4: -1347990240
+    Path: event:/Footsteps
+  rate: 0.75
+  player: {fileID: 1894733442}
+  controller: {fileID: 1787643551}
+--- !u!4 &51428370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51428368}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 186.86171, y: 14.99725, z: 119.17029}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &74955437 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7902690038728508860, guid: b4241c43fcb3c434dabbe7302e6fe91e, type: 3}
@@ -1153,35 +1192,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485991977}
-  - component: {fileID: 485991976}
   m_Layer: 0
-  m_Name: Grassland Area
+  m_Name: 'Grassland '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &485991976
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485991975}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 195.6398, y: 3.5, z: 63.95263}
-  m_Center: {x: 26.944685, y: 0, z: 1.3264469}
 --- !u!4 &485991977
 Transform:
   m_ObjectHideFlags: 0
@@ -1194,9 +1211,16 @@ Transform:
   m_LocalPosition: {x: 201.9, y: 21.74944, z: 194.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1632375740}
+  - {fileID: 1506287037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 34.4, z: 0}
+--- !u!1 &496705767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6258991218409019183, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
+  m_PrefabInstance: {fileID: 976549232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &579792472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1029784163293705222, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -1611,7 +1635,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4459864851508666808, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -1630,6 +1655,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1894733446}
+    - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1894733451}
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
 --- !u!1 &712985245 stripped
 GameObject:
@@ -2061,13 +2089,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6258991218409019183, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 976549237}
   m_SourcePrefab: {fileID: 100100000, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
 --- !u!4 &976549233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6744061236805062037, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
   m_PrefabInstance: {fileID: 976549232}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &976549237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496705767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -327128085
+      Data2: 1233182922
+      Data3: 1773384364
+      Data4: 1197510187
+    Path: event:/Fire
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 40
 --- !u!1 &990192536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4993826719902279726, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -2897,11 +2959,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1592929247
+      Data2: 1171910985
+      Data3: -665397855
+      Data4: -602464984
+    Path: event:/Beach
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -2911,8 +2973,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1260499796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2926,7 +2988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ambiance
   Area: {fileID: 24468493}
-  Player: {fileID: 0}
+  Player: {fileID: 1894733442}
 --- !u!1 &1296195879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6453533764971325562, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -3415,6 +3477,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 43168838ca26b104bb92c400966bc0b2, type: 3}
   m_PrefabInstance: {fileID: 1476060733}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1506287036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506287037}
+  - component: {fileID: 1506287038}
+  m_Layer: 0
+  m_Name: Grassland Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506287037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506287036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 3.7991, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1506287038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506287036}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 195.6398, y: 3.5000002, z: 438.0192}
+  m_Center: {x: 26.944242, y: 0, z: 188.35976}
 --- !u!1 &1532130458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 474075408046790996, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -3776,6 +3891,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d1198af13763d458d07e6eba44d247, type: 3}
+--- !u!1 &1632375739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632375740}
+  - component: {fileID: 1632375742}
+  - component: {fileID: 1632375741}
+  m_Layer: 0
+  m_Name: Grassland Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1632375740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632375739}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 485991977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632375741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632375739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 926830273
+      Data2: 1243621657
+      Data3: -199523662
+      Data4: -829548119
+    Path: event:/Forest
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1632375742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632375739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0346fb793dcaa4a53b10133fde8c1a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ambiance
+  Area: {fileID: 1506287038}
+  Player: {fileID: 1894733442}
 --- !u!1 &1673298328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5832274218699194026, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
@@ -4086,6 +4279,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9581a56935d04a641b1bda839b642a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnManager
+--- !u!114 &1787643551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 700019143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075255882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90ba6530d9bfda47abb4610956b2f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1797654825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5403,6 +5607,20 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   m_PrefabInstance: {fileID: 700019143}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1894733451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894733442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1001 &1901357185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5805,3 +6023,4 @@ SceneRoots:
   - {fileID: 182775121}
   - {fileID: 474607336148019338}
   - {fileID: 17332939}
+  - {fileID: 51428370}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using FMODUnity;
 
 public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -17,6 +18,13 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private Vector3 targetScale;
     private Color targetColor;
     
+    [SerializeField] EventReference hoverSound;
+    [SerializeField] GameObject player;
+
+    public void PlayHoverSound()
+    {
+        RuntimeManager.PlayOneShotAttached(hoverSound, player);
+    }
     void Start()
     {
         // Get the TextMeshPro component from child
@@ -57,6 +65,7 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         targetScale = originalScale * hoverScale;
         targetColor = hoverColor;
+        PlayHoverSound();
     }
     
     public void OnPointerExit(PointerEventData eventData)
