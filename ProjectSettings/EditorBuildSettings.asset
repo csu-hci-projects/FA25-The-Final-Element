@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lab1.unity
     guid: 94c6acb51bbe84597ac6594096a8596d
+  - enabled: 1
+    path: Assets/Scenes/LabRoom.unity
+    guid: abf95a76f40b9a64a8a29c88db0d2e9e
+  - enabled: 1
+    path: Assets/Scenes/Storage.unity
+    guid: e33f1c11ed7e6bb41acede79441d29fc
   - enabled: 0
     path: Assets/Scenes/Main Menu V2.asset.unity
     guid: 5c1e59e461d764768ad1e23a09fc83ae

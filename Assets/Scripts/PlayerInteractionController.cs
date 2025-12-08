@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // ADD THIS
 using TMPro;
 using Unity.VisualScripting;
 
@@ -16,22 +17,45 @@ public class PlayerInteractionController : MonoBehaviour
 
     private IInteractable currentInteractable;
     private GameObject currentInteractableObject;
-    private void Start()
-{
-    // Auto-find camera if not assigned
-    if (playerCamera == null)
+
+    // ADD THESE METHODS
+    void OnEnable()
     {
-        playerCamera = GetComponentInChildren<Camera>();
+        // Subscribe to scene loaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        // Unsubscribe to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Clear interaction prompt when scene loads
+        ClearCurrentInteractable();
+        Debug.Log($"[PlayerInteraction] Scene loaded: {scene.name} - Prompt cleared");
+    }
+    // END OF NEW METHODS
+
+    private void Start()
+    {
+        // Auto-find camera if not assigned
         if (playerCamera == null)
         {
-            Debug.LogError("No camera found on player!");
-        }
-        else
-        {
-            Debug.Log($"Camera found: {playerCamera.name}");
+            playerCamera = GetComponentInChildren<Camera>();
+            if (playerCamera == null)
+            {
+                Debug.LogError("No camera found on player!");
+            }
+            else
+            {
+                Debug.Log($"Camera found: {playerCamera.name}");
+            }
         }
     }
-}
+
     private void Update()
     {
         CheckForInteractable();
@@ -42,16 +66,17 @@ public class PlayerInteractionController : MonoBehaviour
             currentInteractable.Interact(gameObject);
         }
     }
-private void CheckForInteractable()
-{
-    Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-    RaycastHit hit;
 
-    // ADD THIS DEBUG LINE
-    Debug.DrawRay(ray.origin, ray.direction * maxInteractionDistance, Color.red);
-
-    if (Physics.Raycast(ray, out hit, maxInteractionDistance, interactableLayer))
+    private void CheckForInteractable()
     {
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+
+        // Debug ray visualization
+        Debug.DrawRay(ray.origin, ray.direction * maxInteractionDistance, Color.red);
+
+        if (Physics.Raycast(ray, out hit, maxInteractionDistance, interactableLayer))
+        {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
             if (interactable != null && interactable.CanInteract())
@@ -66,6 +91,7 @@ private void CheckForInteractable()
         }
         ClearCurrentInteractable();
     }
+
     private void SetCurrentInteractable(IInteractable interactable, GameObject obj)
     {
         if (currentInteractable != interactable)
@@ -75,6 +101,7 @@ private void CheckForInteractable()
             ShowInteractionPrompt(interactable.GetInteractionPrompt());
         }
     }
+
     private void ClearCurrentInteractable()
     {
         if(currentInteractable != null)
@@ -84,6 +111,7 @@ private void CheckForInteractable()
             HideInteractionPrompt();
         }
     }
+
     private void ShowInteractionPrompt(string text)
     {
         if (interactionPromptUI != null)
@@ -95,6 +123,7 @@ private void CheckForInteractable()
             }
         }
     }
+
     private void HideInteractionPrompt()
     {
         if (interactionPromptUI != null)
