@@ -6,26 +6,36 @@ public class Electrical_Minigame_Interaction : MonoBehaviour
     public GameObject minigameUI;
     public Camera minigameCamera;
     public Camera playerCamera;
-    public FirstPersonController playerMovement; // whatever script controls your FPS
-
+    public FirstPersonController playerMovement; 
+    public GameObject promptUI;
     bool playerInRange = false;
+    private bool minigameOpen = false;
 
     void Start()
     {
+        
+        promptUI.SetActive(false);
+        
         minigameUI.SetActive(false);
         minigameCamera.gameObject.SetActive(false);
     }
 
     void Update()
     {
+        
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             OpenMinigame();
+        }
+        if (minigameOpen && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseMinigame();
         }
     }
 
     void OpenMinigame()
     {
+        minigameOpen = true;
         // lock player so they can't move while inside minigame
         playerMovement.enabled = false;
 
@@ -44,6 +54,7 @@ public class Electrical_Minigame_Interaction : MonoBehaviour
     // EXIT function (you call this when puzzle ends)
     public void CloseMinigame()
     {
+        minigameOpen = false;
         playerMovement.enabled = true;
 
         minigameCamera.gameObject.SetActive(false);
@@ -59,11 +70,13 @@ public class Electrical_Minigame_Interaction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             playerInRange = true;
+            promptUI.SetActive(true);
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
             playerInRange = false;
+            promptUI.SetActive(false);
     }
 }
