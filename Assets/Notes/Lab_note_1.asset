@@ -14,24 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Lab_Note_1
   noteTitle: Anomalous Reaction Report (Day 8)
-  noteContent: "Author: Dr. Selene Hart\n\nComposite-0\u2019s behavior continues
-    to escalate beyond anything we predicted. When first collected, the material
-    behaved like a harmless mineral sample\u2014dense, inert, and structurally stable.
-    But once inside the lab environment, its reactions changed dramatically.\n\nThe
-    material responds instantly to heat, sound vibrations, and even low-level electrical
-    currents. When exposed to a running circuit, Composite-0 began creeping along
-    the metal surface, almost as if it were following the electricity. Pulse sensors
-    recorded small energy fluctuations inside the material itself, suggesting it
-    generates microcurrents or reacts to those around it.\n\nAttempts to sterilize
-    or isolate the sample only slowed it down temporarily. Within minutes, the material
-    regrew, reformed, or shifted into a new configuration. The pattern is clear:
-    Composite-0 does not behave like rock, crystal, or metal. It behaves like something
-    alive\u2014if not biologically, then at least behaviorally.\n\nRecommendation:
-    treat Composite-0 as an active hazard.\nDo not handle without protective gear.
-    Do not expose to electrical systems unless supervised.\nIt is adapting, and we
-    don\u2019t yet know to what end.\n"
+  noteContent: 'Author: Dr. Hart
+
+
+
+    Composite-0 continues to defy expectations.
+    It reacts rapidly to changes in heat, sound, and even subtle shifts in electrical
+    current. Growth along metal surfaces suggests a preference for conductive pathways,
+    as if the material "seeks" them out. Attempts to sterilize or isolate it temporarily
+    slow expansion, but regrowth occurs within minutes.
+
+
+
+    Recommend treating
+    Composite-0 as an active hazard rather than a passive sample.
+
+'
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: "It follows electricity? And regrows after being removed\u2026
-    This isn\u2019t a mineral. It\u2019s reacting\u2014thinking\u2014changing. The
-    team must\u2019ve been terrified."
+  innerDialogueAfterClose: 

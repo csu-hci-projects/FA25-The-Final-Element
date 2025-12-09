@@ -14,23 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Lab_Note_2
   noteTitle: ' Elemental Drain Hypothesis (Day 12)'
-  noteContent: "Author: Dr. Mara Ishikawa\n\nAfter reviewing the latest geological
-    data from Earth and our material generation logs from the island, I believe we\u2019re
-    seeing a one-to-one correspondence between disappearing Earth elements and newly
-    formed substitute elements here.\n\nFor example: Earth reported a sharp decline
-    in accessible iron reserves over the last two weeks. At nearly the same time,
-    our team began observing a spike in iron-analog materials appearing across the
-    island. The same correlation shows up with copper, carbon, and several other
-    essential resource classes.\n\nThis suggests a direct relationship\u2014possibly
-    even a transfer\u2014between the Earth\u2019s elemental supply and the material
-    production happening on the island. The island may be drawing, siphoning, or
-    replicating matter at the cost of Earth's existing reserves.\n\nWe don\u2019t
-    understand the mechanism yet. Whether it\u2019s geological, atmospheric, magnetic,
-    or something entirely new, the effect is unmistakable:\n\nThe more this island
-    produces, the more Earth loses.\n\nIf this continues unchecked, shortages will
-    escalate worldwide."
+  noteContent: "Author: Dr. Ishikawa\r\n\r\nEvidence suggests the substitute materials
+    are not merely imitations \u2014 they manifest in direct proportion to declining
+    natural elements on Earth. Replacement seems one-to-one: formation of a substitute
+    iron variant here corresponds with decreases in iron reserves elsewhere.\r\n\r\nThis
+    parasitic linkage implies that the island is siphoning Earth\u2019s elemental
+    stability. If so, the global consequences will accelerate rapidly."
   noteImage: {fileID: 0}
   category: 2
-  innerDialogueAfterClose: "\u2026So every substitute here forms because the real
-    element disappears back home. Iron, copper, carbon\u2026 all vanishing. The island
-    isn\u2019t helping Earth\u2014it\u2019s stealing from it."
+  innerDialogueAfterClose: 

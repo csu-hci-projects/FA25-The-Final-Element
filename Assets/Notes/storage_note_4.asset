@@ -14,19 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: storage_note_4
   noteTitle: Failsafe Wiring Offset Instructions (Day 20)
-  noteContent: "Author: Technician Jonah Reyes\n\nComposite-0 didn\u2019t just block
-    the activation alcove\u2014it spread through the facility\u2019s wiring systems,
-    corrupting primary power channels and melting several cable paths. The override
-    console still functions, but it requires manual rerouting through the secondary
-    conduits to bypass the damage.\n\nI traced the intact lines and mapped an alternate
-    wiring sequence. If you reach the console, you\u2019ll need to connect the conduits
-    in this order:\n\nRed \u2192 Purple\nBlue \u2192 Red\nGreen \u2192 Blue\nPurple
-    \u2192 Green\n\nThis offset bypasses the crystallized segments and should provide
-    enough power to trigger the cascade.\n\nNo one on the team can get close enough
-    to test it. Composite-0 won\u2019t let us anywhere near the alcove.\n\nIf you\u2019re
-    not already contaminated, this is your only shot.\n\nGood luck."
+  noteContent: "Author: Technician Reyes\r\n\r\nComposite-0 corrupted the primary
+    wiring grid. To bypass the damage and activate the device, reroute power through
+    the offset conduits. Correct pairing sequence:\r\n\r\nRed \u2192 Purple\r\n\r\nBlue
+    \u2192 Red\r\n\r\nGreen\u2192 Blue\r\n\r\nPurple\u2192 Green"
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: "One wiring sequence\u2026 and the device activates. If
-    I do this, there\u2019s no escape. But if I don\u2019t\u2026 the world ends.
-    This was never about surviving. It was about choosing who does."
+  innerDialogueAfterClose: 

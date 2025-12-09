@@ -14,21 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Lab_note_4
   noteTitle: Global Implications (Day 14)
-  noteContent: "Author: Dr. Selene Hart\n\nOur updated projections are grim. If the
-    island\u2019s drain effect progresses at its current rate, Earth will face severe
-    biosphere destabilization within a few years. The consequences wouldn\u2019t
-    just affect manufacturing or construction\u2014they would reach agriculture,
-    medicine, atmospheric stability, and even basic biological processes that rely
-    on specific metals and carbon structures.\n\nIn short: the planet\u2019s chemistry
-    is being rewritten, one element at a time.\n\nGiven the urgency, the research
-    team unanimously agreed to shift priorities. Further study is secondary. The
-    island must be neutralized. We have begun designing a failsafe using the substitute
-    materials themselves, despite their volatility. Early tests suggest that when
-    arranged in a specific pattern, these materials create a destructive resonance
-    that could sever the island\u2019s link to Earth.\n\nIt\u2019s dangerous, experimental,
-    and untested. But it may be our only option."
+  noteContent: "Author: Dr. Hart\r\n\r\nProjected models indicate escalating collapse
+    of Earth\u2019s biosphere if the island\u2019s drain effect continues. Atmospheric
+    composition, structural metals, and even biological processes relying on native
+    elements will destabilize. Neutralization of the island overrides all remaining
+    research priorities.\r\n\r\nTeam redirected efforts into building a reactive
+    failsafe using the substitute materials themselves."
   noteImage: {fileID: 0}
   category: 2
-  innerDialogueAfterClose: "If the drain keeps accelerating, the whole planet collapses.
-    No metals, no medicine, no air stability. Nothing. The team didn\u2019t switch
-    to a failsafe because they wanted to\u2014they had no choice."
+  innerDialogueAfterClose: 

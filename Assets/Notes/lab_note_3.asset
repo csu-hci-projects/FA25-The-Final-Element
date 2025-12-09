@@ -13,29 +13,8 @@ MonoBehaviour:
   m_Name: lab_note_3
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: lab_note_3
-  noteTitle: Cross-Exposure Biological Assessment (Day 13)
-  noteContent: "Author: Dr. Elijah Morrow\n\nFollowing reports of unusual fatigue
-    among the research team, we conducted a series of precautionary scans to rule
-    out environmental contamination. While no illness was detected, several surprising
-    patterns emerged.\n\nTrace amounts of analog particulate matter \u2014 the same
-    class of unstable compounds found in soil samples \u2014 were identified on clothing,
-    skin, and in some cases, within shallow respiratory pathways. These particles
-    appear chemically similar to Composite-0 but exist in a more diffuse, airborne
-    form.\n\nAlthough the concentrations are extremely low, the particles show a
-    consistent behavior: they align themselves with the body's natural electrical
-    signals, almost as if they are \u201Creading\u201D or adapting to biological
-    patterns. Over time, the bonding increases, though not enough to harm the host.\n\nWe
-    do not yet understand the purpose or mechanism behind this. However, early modeling
-    suggests prolonged exposure may cause these analog particles to treat the host
-    as part of the island\u2019s environment. This may explain why the island\u2019s
-    materials behave differently when handled by staff who have been here since Day
-    1.\n\nFurther study is required, but a working theory is emerging:\nthe island
-    doesn\u2019t just produce substitute elements\u2014\nit gradually integrates
-    anything that stays within its field long enough.\n\nIf true, this could have
-    implications for both material handling and long-term personnel safety."
+  noteTitle: 
+  noteContent: 
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: "So the island was getting into their systems\u2026 their
-    bodies. If those particles were aligning with their nerves, maybe that\u2019s
-    why Composite-0 reacted differently to them. I haven\u2019t been here long \u2014
-    maybe that\u2019s the only reason it\u2019s not reacting to me yet."
+  innerDialogueAfterClose: 

@@ -14,26 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Storage_Note_1
   noteTitle: Material Integration Log (Day 16)
-  noteContent: "Author: Dr. Selene Hart\n\nWe have completed full integration of
-    the island\u2019s substitute materials into the neutralization system. Every
-    sample\u2014metallic shards, crystalline composites, and carbon-like structures\u2014now
-    occupies a precise position within the containment racks. Each component is arranged
-    according to its behavioral role: conduction, heat absorption, resonance amplification,
-    or controlled instability.\n\nDuring assembly, we confirmed that many substitutes
-    temporarily mimic Earth materials well enough to interface with standard machinery.
-    A copper-like variant carried current almost perfectly. An iron analog reinforced
-    pressure plates far beyond expected limits. These traits allowed us to build
-    the foundation of the device.\n\nHowever, the drawback is unavoidable: removing
-    even a single component disrupts the resonance pattern. The system depends on
-    all materials remaining inside this chamber. Their interaction\u2014volatile
-    as it is\u2014is what creates the chain reaction capable of severing the island\u2019s
-    elemental drain.\n\nThis room is no longer a storage area.\nIt is the device.\nThe
-    walls, racks, and embedded materials all contribute to its function. Any attempt
-    to repurpose or remove the components for external use\u2014such as repairing
-    transport equipment\u2014would dismantle the failsafe entirely.\n\nWe cannot
-    risk that."
+  noteContent: 'Author: Dr. Hart
+
+    
+
+    All substitute materials collected
+    from the island have now been integrated into the neutralization system. Their
+    unstable molecular structure, while unsuitable for long-term engineering, reacts
+    with exceptional precision when embedded into the containment channels, forming
+    the core of the cascade sequence.
+
+    
+
+    During preliminary testing, we
+    confirmed that several substitutes exhibit temporary compatibility with standard
+    mechanical interfaces. However, diverting any portion of these materials away
+    from the containment racks compromises system integrity and prevents the neutralization
+    sequence from forming.
+
+    
+
+    This chamber functions as a single, unified
+    device. Any removal, repurposing, or reallocation of its components will render
+    the failsafe inoperable.
+
+'
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: "They built the bomb into the room itself\u2026 And I
-    was thinking about tearing parts out to fix the pod. If I had done that, I would've
-    destroyed their only chance."
+  innerDialogueAfterClose: 
