@@ -14,11 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: storage_note_2
   noteTitle: Neutralization Integration Log (Day 19)
-  noteContent: "Author: Dr. Morrow\r\n\r\nThe bomb's design relies entirely on the
-    substitutes' chemical volatility. Properly chained, they resonate with the island\u2019s
-    analog lattice and sever the parasitic link to Earth. Removing components breaks
-    this resonance instantly.\r\n\r\nThe device is complete. All that remains is
-    manual activation through the override console."
+  noteContent: "Author: Dr. Elias Morrow\n\nThe neutralization device is now fully
+    assembled. Our tests show that when the substitute materials are linked in the
+    correct sequence, they generate a resonance that destabilizes the island\u2019s
+    analog lattice\u2014the network responsible for producing new matter and drawing
+    elements from Earth.\n\nThe effect is violent but controlled, provided activation
+    follows the correct procedure. If successful, the detonation will collapse the
+    island\u2019s internal structure and sever its link to Earth\u2019s elemental
+    supply. Without this link, Earth\u2019s natural processes should gradually recover.\n\nImportantly,
+    the device cannot be relocated or rebuilt elsewhere. The substitutes degrade
+    too quickly outside this chamber, and their placement is bound to the island\u2019s
+    environmental field. This is a one-use system, tied to this exact location.\n\nThe
+    bomb is ready. All that remains is manual activation at the override console."
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: 
+  innerDialogueAfterClose: "So it works. The resonance, the substitutes\u2014they\u2019re
+    all ready. They got this far\u2026 and then something stopped them. I can finish
+    it."
