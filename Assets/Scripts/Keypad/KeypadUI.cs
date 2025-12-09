@@ -22,7 +22,7 @@ public class KeypadUI : MonoBehaviour
     private string currentInput = "";
     private bool isProcessing = false;
     private FirstPersonController playerController;
-    private InteractableKeypad connectedKeypad; // The keypad that opened this UI
+    private KeypadInteraction connectedKeypad; // The keypad that opened this UI
     
     void Start()
     {
@@ -157,7 +157,7 @@ public class KeypadUI : MonoBehaviour
         }
     }
     
-    public void OpenKeypad(InteractableKeypad keypad)
+    public void OpenKeypad(KeypadInteraction keypad)
     {
         connectedKeypad = keypad;
         
