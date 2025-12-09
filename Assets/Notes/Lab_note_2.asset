@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0ebe585c5d284459a556da43b3508b, type: 3}
+  m_Name: Lab_note_2
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  noteID: Lab_Note_2
+  noteTitle: ' Elemental Drain Hypothesis (Day 12)'
+  noteContent: "Author: Dr. Ishikawa\r\n\r\nEvidence suggests the substitute materials
+    are not merely imitations \u2014 they manifest in direct proportion to declining
+    natural elements on Earth. Replacement seems one-to-one: formation of a substitute
+    iron variant here corresponds with decreases in iron reserves elsewhere.\r\n\r\nThis
+    parasitic linkage implies that the island is siphoning Earth\u2019s elemental
+    stability. If so, the global consequences will accelerate rapidly."
+  noteImage: {fileID: 0}
+  category: 2
+  innerDialogueAfterClose: 

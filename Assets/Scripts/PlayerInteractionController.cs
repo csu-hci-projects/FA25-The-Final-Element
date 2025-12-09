@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // ADD THIS
+using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
 
@@ -18,7 +18,6 @@ public class PlayerInteractionController : MonoBehaviour
     private IInteractable currentInteractable;
     private GameObject currentInteractableObject;
 
-    // ADD THESE METHODS
     void OnEnable()
     {
         // Subscribe to scene loaded event
@@ -37,7 +36,6 @@ public class PlayerInteractionController : MonoBehaviour
         ClearCurrentInteractable();
         Debug.Log($"[PlayerInteraction] Scene loaded: {scene.name} - Prompt cleared");
     }
-    // END OF NEW METHODS
 
     private void Start()
     {
@@ -124,7 +122,7 @@ public class PlayerInteractionController : MonoBehaviour
         }
     }
 
-    private void HideInteractionPrompt()
+    public void HideInteractionPrompt() // CHANGED FROM "private" TO "public"
     {
         if (interactionPromptUI != null)
         {
