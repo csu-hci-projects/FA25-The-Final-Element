@@ -12407,24 +12407,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5640584, y: 1.5157523, z: 0.92938644}
-  m_Center: {x: -0.92379797, y: 0.04806112, z: -0.18804123}
---- !u!114 &2126135321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126135311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fac7c618c6cbe54a9b0206865472a23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableKeypad
-  keypadName: Security Terminal
-  interactionDistance: 4
-  keypadUI: {fileID: 9053979}
-  targetSceneName: Storage
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2131987707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 824d29c7f2ecaa4498edae2e4703b726, type: 3}
@@ -12454,3 +12438,4 @@ SceneRoots:
   - {fileID: 2102552777}
   - {fileID: 1250150902}
   - {fileID: 361577218}
+  - {fileID: 987554076}
