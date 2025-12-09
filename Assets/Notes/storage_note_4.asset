@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0ebe585c5d284459a556da43b3508b, type: 3}
+  m_Name: storage_note_4
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  noteID: storage_note_4
+  noteTitle: Failsafe Wiring Offset Instructions (Day 20)
+  noteContent: "Author: Technician Reyes\r\n\r\nComposite-0 corrupted the primary
+    wiring grid. To bypass the damage and activate the device, reroute power through
+    the offset conduits. Correct pairing sequence:\r\n\r\nRed \u2192 Purple\r\n\r\nBlue
+    \u2192 Red\r\n\r\nGreen\u2192 Blue\r\n\r\nPurple\u2192 Green"
+  noteImage: {fileID: 0}
+  category: 0
+  innerDialogueAfterClose: 

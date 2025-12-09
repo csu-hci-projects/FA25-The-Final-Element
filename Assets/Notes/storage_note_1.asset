@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0ebe585c5d284459a556da43b3508b, type: 3}
+  m_Name: storage_note_1
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  noteID: Storage_Note_1
+  noteTitle: Material Integration Log (Day 16)
+  noteContent: 'Author: Dr. Hart
+
+    
+
+    All substitute materials collected
+    from the island have now been integrated into the neutralization system. Their
+    unstable molecular structure, while unsuitable for long-term engineering, reacts
+    with exceptional precision when embedded into the containment channels, forming
+    the core of the cascade sequence.
+
+    
+
+    During preliminary testing, we
+    confirmed that several substitutes exhibit temporary compatibility with standard
+    mechanical interfaces. However, diverting any portion of these materials away
+    from the containment racks compromises system integrity and prevents the neutralization
+    sequence from forming.
+
+    
+
+    This chamber functions as a single, unified
+    device. Any removal, repurposing, or reallocation of its components will render
+    the failsafe inoperable.
+
+'
+  noteImage: {fileID: 0}
+  category: 0
+  innerDialogueAfterClose: 

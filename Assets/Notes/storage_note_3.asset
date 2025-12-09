@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0ebe585c5d284459a556da43b3508b, type: 3}
+  m_Name: storage_note_3
+  m_EditorClassIdentifier: Assembly-CSharp::NoteData
+  noteID: storage_note_3
+  noteTitle: ' Final Attempt Log (Day 20)'
+  noteContent: "Author: Dr. Ishikawa\r\n\r\nRepeated attempts to reach the activation
+    console have failed. Composite-0 has adapted to our presence; days of exposure
+    have allowed trace analog particles to enter our bloodstream. The material now
+    reacts to us as if we are part of the island\u2019s internal system.\r\n\r\nWhen
+    we approach the activation alcove, Composite-0 initiates defensive crystallization\u2014blocking
+    pathways, sealing doors, and encasing equipment within seconds. The deeper we
+    enter the chamber, the faster the reaction becomes. Direct detonation is no longer
+    physically possible for anyone who has spent significant time on the island.\r\n\r\nSome
+    discussed evacuation, but diverting even a fraction of the substitute materials
+    from this chamber would dismantle the neutralization device entirely. To leave
+    would be to ensure the island\u2019s continued growth\u2014and Earth\u2019s collapse.\r\n\r\nWe
+    can no longer reach the console. If you are reading this, it is because the island
+    has not yet \u201Crecognized\u201D you. You may be able to access what we could
+    not."
+  noteImage: {fileID: 0}
+  category: 0
+  innerDialogueAfterClose: 
