@@ -14,40 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Lab_note_5
   noteTitle: 'Inventory-Based Access Protocol (Day 15) '
-  noteContent: 'Author: Technician Reyes
-
-    
-
-    Composite-0 interference has
-    rendered all digital entry systems unusable. Access to the Storage Room requires
-    manual code entry based on equipment counts in the lab area.
-
-    
-
-    Code
-    Sequence:
-
-    
-
-    Total Number of flask with blue portion
-
-    
-
-    Total
-    of Bunsen Burner
-
-    
-
-    Total of Fire Extinguisher
-
-    
-
-    Total of
-    Microscopes
-
-    
-
-    This is a temporary workaround. Use carefully.'
+  noteContent: "Author: Technician Jonah Reyes\n\nComposite-0 has compromised all
+    digital access systems. The Storage Room door control panel displayed corrupted
+    data this morning, and the touch interface froze entirely. Standard repair tools
+    are useless\u2014the material\u2019s interference scrambles electronic components
+    the moment they activate.\n\nAs a workaround, I\u2019ve set up a mechanical access
+    code based on physical inventory counts inside the lab. It\u2019s crude, but
+    Composite-0 seems unable to interfere with manual systems.\n\nAccess Code Sequence:\n\nCount
+    total flasks with blue substance.\n\nCount total Bunsen Burners.\n\nCount total
+    fire extinguishers.\n\nCount total microscopes.\n\nEnter the four numbers in
+    that order.\n\nThis should keep the Storage Room secure\u2026 and hopefully,
+    keep Composite-0 out.."
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: 
+  innerDialogueAfterClose: "If they guarded the Storage Room this hard, whatever\u2019s
+    inside must be critical. Maybe the materials I need\u2026 or maybe something
+    worse."
