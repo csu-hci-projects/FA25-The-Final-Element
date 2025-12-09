@@ -21,11 +21,15 @@ public class KeypadUI : MonoBehaviour
     
     private string currentInput = "";
     private bool isProcessing = false;
-    private KeypadInteraction connectedKeypad;
+    private FirstPersonController playerController;
+    private InteractableKeypad connectedKeypad; // The keypad that opened this UI
     
     void Start()
     {
         UpdateDisplay();
+        
+        // Find player controller
+        playerController = FindAnyObjectByType<FirstPersonController>();
         
         // Make sure keypad UI is hidden at start
         if (keypadCanvas != null)
@@ -96,10 +100,13 @@ public class KeypadUI : MonoBehaviour
             {
                 connectedKeypad.OnCodeCorrect();
             }
+            
+            // Close the UI
+            CloseKeypad();
         }
         else
         {
-            // Wrong code - player just tries again
+            // Wrong code
             yield return StartCoroutine(ShowError());
             currentInput = "";
             UpdateDisplay();
@@ -150,7 +157,7 @@ public class KeypadUI : MonoBehaviour
         }
     }
     
-    public void OpenKeypad(KeypadInteraction keypad)
+    public void OpenKeypad(InteractableKeypad keypad)
     {
         connectedKeypad = keypad;
         
@@ -161,6 +168,17 @@ public class KeypadUI : MonoBehaviour
         
         currentInput = "";
         UpdateDisplay();
+        
+        // Pause player movement
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        
+        // Disable player controller
+        if (playerController != null)
+        {
+            playerController.enabled = false;
+        }
     }
     
     public void CloseKeypad()
@@ -172,10 +190,24 @@ public class KeypadUI : MonoBehaviour
         
         currentInput = "";
         
-        // Tell KeypadInteraction to handle closing
-        if (connectedKeypad != null)
+        // Resume player movement
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
+        // Re-enable player controller
+        if (playerController != null)
         {
-            connectedKeypad.CloseKeypad();
+            playerController.enabled = true;
+        }
+    }
+    
+    void Update()
+    {
+        // Allow ESC to close keypad
+        if (Input.GetKeyDown(KeyCode.Escape) && keypadCanvas != null && keypadCanvas.activeSelf)
+        {
+            CloseKeypad();
         }
     }
 }
