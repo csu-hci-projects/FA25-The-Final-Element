@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lab_note_2
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: Lab_Note_2
-  noteTitle: ' Elemental Drain Hypothesis (Day 12)'
+  noteTitle: Elemental Drain Hypothesis (Day 12
   noteContent: "Author: Dr. Mara Ishikawa\n\nAfter reviewing the latest geological
     data from Earth and our material generation logs from the island, I believe we\u2019re
     seeing a one-to-one correspondence between disappearing Earth elements and newly

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lab_note_3
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: lab_note_3
-  noteTitle: 
+  noteTitle: Cross-Exposure Biological Assessment (Day 13)
   noteContent: "Author: Dr. Elijah Morrow\n\nFollowing reports of unusual fatigue
     among the research team, we conducted a series of precautionary scans to rule
     out environmental contamination. While no illness was detected, several surprising

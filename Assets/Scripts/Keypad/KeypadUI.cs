@@ -150,18 +150,33 @@ public class KeypadUI : MonoBehaviour
         }
     }
     
-    public void OpenKeypad(KeypadInteraction keypad)
+public void OpenKeypad(KeypadInteraction keypad)
+{
+    Debug.Log("=== KeypadUI.OpenKeypad() called ===");
+    
+    connectedKeypad = keypad;
+    
+    Debug.Log("keypadCanvas is null? " + (keypadCanvas == null));
+    
+    if (keypadCanvas != null)
     {
-        connectedKeypad = keypad;
+        Debug.Log("keypadCanvas name: " + keypadCanvas.name);
+        Debug.Log("keypadCanvas active before: " + keypadCanvas.activeSelf);
         
-        if (keypadCanvas != null)
-        {
-            keypadCanvas.SetActive(true);
-        }
+        keypadCanvas.SetActive(true);
         
-        currentInput = "";
-        UpdateDisplay();
+        Debug.Log("keypadCanvas active after: " + keypadCanvas.activeSelf);
     }
+    else
+    {
+        Debug.LogError("keypadCanvas is NULL!");
+    }
+    
+    currentInput = "";
+    UpdateDisplay();
+    
+    Debug.Log("=== KeypadUI.OpenKeypad() complete ===");
+}
     
     public void CloseKeypad()
     {

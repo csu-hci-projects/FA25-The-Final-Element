@@ -18,7 +18,8 @@ public class KeypadInteraction : MonoBehaviour
     void Start()
     {
         promptUI.SetActive(false);
-        keypadUI.gameObject.SetActive(false);
+        // DON'T deactivate the keypadUI GameObject!
+        // The KeypadUI script handles its own visibility
         
         // Check if already unlocked
         string unlockKey = $"Keypad_Unlocked_{targetSceneName}";
@@ -31,12 +32,10 @@ public class KeypadInteraction : MonoBehaviour
         {
             if (isUnlocked)
             {
-                // Already unlocked, just teleport
                 TeleportToScene();
             }
             else
             {
-                // Open keypad
                 OpenKeypad();
             }
         }
@@ -49,14 +48,19 @@ public class KeypadInteraction : MonoBehaviour
 
     void OpenKeypad()
     {
+        Debug.Log("=== OPENING KEYPAD ===");
         minigameOpen = true;
         
         // Disable player movement
-        playerMovement.enabled = false;
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+            Debug.Log("Player movement disabled");
+        }
         
-        // Show keypad UI
-        keypadUI.gameObject.SetActive(true);
+        // Show keypad UI - let KeypadUI handle its own activation
         keypadUI.OpenKeypad(this);
+        Debug.Log("Called OpenKeypad on KeypadUI");
         
         // Unlock cursor
         Cursor.lockState = CursorLockMode.None;
@@ -64,6 +68,8 @@ public class KeypadInteraction : MonoBehaviour
         
         // Hide prompt
         promptUI.SetActive(false);
+        
+        Debug.Log("=== KEYPAD OPENED ===");
     }
 
     public void CloseKeypad()
@@ -71,29 +77,29 @@ public class KeypadInteraction : MonoBehaviour
         minigameOpen = false;
         
         // Re-enable player movement
-        playerMovement.enabled = true;
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
+        }
         
         // Hide keypad UI
-        keypadUI.gameObject.SetActive(false);
+        keypadUI.CloseKeypad();
         
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    // Called by KeypadUI when code is correct
     public void OnCodeCorrect()
     {
         isUnlocked = true;
         
-        // Save unlock state
         string unlockKey = $"Keypad_Unlocked_{targetSceneName}";
         PlayerPrefs.SetInt(unlockKey, 1);
         PlayerPrefs.Save();
         
         Debug.Log("Keypad unlocked! Teleporting...");
         
-        // Wait a moment then teleport
         Invoke(nameof(TeleportToScene), 1f);
     }
 

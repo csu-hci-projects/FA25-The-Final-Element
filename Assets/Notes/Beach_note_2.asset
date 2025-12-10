@@ -16,7 +16,7 @@ MonoBehaviour:
   noteTitle: Escape Pod Repair Blueprint
   noteContent: "Author: Department of Field Logistics\n\nTo restore basic launch
     capability to the R-POD 74C escape unit, the following Earth-standard components
-    must be replaced:\n\n\t-Conductive alloy plates (iron/copper mix): manage electrical
+    must be replaced:\n\t-Conductive alloy plates (iron/copper mix): manage electrical
     flow across hull panels.\n\t-Stabilizer gel: prevents catastrophic vibration
     during ignition.\n\t-Micro-capacitor ignition units: store and release the burst
     of power needed for liftoff.\n\t-Reinforced carbon housing panels: maintain internal
@@ -29,8 +29,7 @@ MonoBehaviour:
     each component. Field agents are instructed to compare unknown materials against
     these parameters to determine potential compatibility.\n\nWarning: substitutes
     may only function for a short duration. Stability varies, and incorrect matches
-    could result in engine failure or hull breach during launch.\n\nUse only if no
-    certified parts are available."
+    could result in engine failure or hull breach during launch."
   noteImage: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   category: 2
   innerDialogueAfterClose: "Conductive plates, stabilizer gel, carbon panels\u2026

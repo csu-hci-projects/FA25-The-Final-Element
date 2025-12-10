@@ -4,8 +4,16 @@ using TMPro;
 
 public class TeleportOnKey : MonoBehaviour
 {
-    public string sceneToLoad = "Lab1";
+    [Header("Scene Settings")]
+    public string sceneToLoad = "card_swipe";
+    
+    [Header("UI")]
     public GameObject pressEText;
+    public GameObject lockedText; // Optional: "Door is locked" message
+    
+    [Header("Card Requirement")]
+    [SerializeField] private string requiredCardID = "Keycard_01"; // Must match the card's ID
+    [SerializeField] private bool requiresCard = true;
 
     private bool playerInZone = false;
 
@@ -14,6 +22,8 @@ public class TeleportOnKey : MonoBehaviour
         // Hide the text at start
         if (pressEText != null)
             pressEText.SetActive(false);
+        if (lockedText != null)
+            lockedText.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,8 +31,7 @@ public class TeleportOnKey : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInZone = true;
-            if (pressEText != null)
-                pressEText.SetActive(true);
+            UpdateUI();
         }
     }
 
@@ -33,6 +42,8 @@ public class TeleportOnKey : MonoBehaviour
             playerInZone = false;
             if (pressEText != null)
                 pressEText.SetActive(false);
+            if (lockedText != null)
+                lockedText.SetActive(false);
         }
     }
 
@@ -40,7 +51,43 @@ public class TeleportOnKey : MonoBehaviour
     {
         if (playerInZone && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            if (CanUseDoor())
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+            else
+            {
+                Debug.Log("Door is locked! You need the keycard.");
+            }
+        }
+    }
+
+    private bool CanUseDoor()
+    {
+        // If door doesn't require a card, always allow
+        if (!requiresCard) return true;
+        
+        // Check if player has the required card
+        return PlayerPrefs.GetInt(requiredCardID, 0) == 1;
+    }
+
+    private void UpdateUI()
+    {
+        if (CanUseDoor())
+        {
+            // Show "Press E" prompt
+            if (pressEText != null)
+                pressEText.SetActive(true);
+            if (lockedText != null)
+                lockedText.SetActive(false);
+        }
+        else
+        {
+            // Show "Locked" message
+            if (pressEText != null)
+                pressEText.SetActive(false);
+            if (lockedText != null)
+                lockedText.SetActive(true);
         }
     }
 }
