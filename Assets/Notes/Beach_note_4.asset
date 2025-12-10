@@ -13,8 +13,29 @@ MonoBehaviour:
   m_Name: Beach_note_4
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: beach_note_4
-  noteTitle: 
-  noteContent: 
+  noteTitle: Resonance Crystal Field Log (Day 4)
+  noteContent: "Author: Dr. Selene Hart\n\nWe\u2019ve begun field tests on the small
+    crystal fragments found along the forest edge. These crystals show a strong response
+    to nearby conductive material and to objects affected by Composite-0. When left
+    alone, the crystal stays dim, but it glows brighter in the presence of metal,
+    scanners, or anything carrying analog activity.\n\nYesterday\u2019s tests revealed
+    an unexpected pattern. The resonance crystal pulsed sharply when the island leopard
+    passed through the clearing. The creature has been stealing equipment for over
+    a week \u2014 datapads, utility tools, a pair of handheld scanners, and now Dr.
+    Hart\u2019s Level-1 keycard. With so many metallic items in its possession, the
+    crystal reacted strongly to its movement.\n\nBased on repeated readings, we believe
+    the leopard stores its hoarded objects in a shallow cave along the western ridge.
+    The resonance glow increases consistently in that direction.\n\nImportant Behavioral
+    Note:\nThis leopard sleeps more than any known variant we\u2019ve studied. It
+    enters deep, extended rest cycles multiple times per day and rarely wakes to
+    noise or normal movement. Even loud conversation near its den doesn\u2019t disturb
+    it.\nHowever, sudden fast movement \u2014 especially sprinting past the den \u2014
+    has startled it awake more than once. Approaching slowly and quietly is strongly
+    advised.\n\nIf further equipment goes missing, use a resonance crystal to locate
+    the den and retrieve items only while the creature is asleep."
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: 
+  innerDialogueAfterClose: "So the crystal points toward stolen gear\u2026 and this
+    leopard barely wakes up unless someone charges past it. If it\u2019s asleep,
+    I should be able to slip in and take the keycard without a fight. Slow. Quiet.
+    Don\u2019t sprint. Got it."

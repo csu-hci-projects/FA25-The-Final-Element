@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteData
   noteID: storage_note_3
   noteTitle: ' Final Attempt Log (Day 20)'
-  noteContent: "Author: Dr. Ishikawa\r\n\r\nRepeated attempts to reach the activation
-    console have failed. Composite-0 has adapted to our presence; days of exposure
-    have allowed trace analog particles to enter our bloodstream. The material now
-    reacts to us as if we are part of the island\u2019s internal system.\r\n\r\nWhen
-    we approach the activation alcove, Composite-0 initiates defensive crystallization\u2014blocking
-    pathways, sealing doors, and encasing equipment within seconds. The deeper we
-    enter the chamber, the faster the reaction becomes. Direct detonation is no longer
-    physically possible for anyone who has spent significant time on the island.\r\n\r\nSome
-    discussed evacuation, but diverting even a fraction of the substitute materials
-    from this chamber would dismantle the neutralization device entirely. To leave
-    would be to ensure the island\u2019s continued growth\u2014and Earth\u2019s collapse.\r\n\r\nWe
-    can no longer reach the console. If you are reading this, it is because the island
-    has not yet \u201Crecognized\u201D you. You may be able to access what we could
-    not."
+  noteContent: "Author: Dr. Mara Ishikawa\n\nWe attempted to activate the device
+    this morning. All attempts failed.\n\nComposite-0 has adapted more rapidly than
+    we anticipated. After nearly three weeks of exposure, trace analog particles
+    have entered our systems\u2014skin, lungs, bloodstream. We don\u2019t feel sick,
+    but the island recognizes us now. Not as intruders, but as part of itself.\n\nWhen
+    any of us approach the activation alcove, Composite-0 reacts immediately. Crystallized
+    growth forms across the doorway, sealing it within moments. Tools become encased
+    in hard mineral shells. Even protective suits begin to stiffen as the material
+    bonds to their surfaces.\n\nThe closer we get to the console, the more aggressive
+    the reaction becomes. For those of us who have worked here since Day 1, the alcove
+    is completely unreachable.\n\nSome suggested evacuating, but removing even a
+    small portion of the substitutes for repairs would collapse the device. Without
+    the bomb, the island will continue draining Earth\u2014faster every day.\n\nWe\u2019ve
+    concluded that none of us can finish this. The island will not let us.\n\nIf
+    you\u2019re reading this, it means the island hasn\u2019t adapted to you yet.\nYou
+    might be able to reach the console.\n\nPlease\u2026 do what we could not."
   noteImage: {fileID: 0}
   category: 0
-  innerDialogueAfterClose: 
+  innerDialogueAfterClose: "Composite-0 claimed them. Marked them. To the island,
+    they became part of the system. But it hasn\u2019t adapted to me yet. I can still
+    reach the console. It has to be me."
