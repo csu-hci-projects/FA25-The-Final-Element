@@ -3630,7 +3630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 418287952353886216, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
       propertyPath: m_Name
-      value: FormerGwangjuMBCBuilding
+      value: LabBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 636711131845082954, guid: 48f106a604bd3344a874ce2946be2d01, type: 3}
       propertyPath: m_LocalPosition.x
