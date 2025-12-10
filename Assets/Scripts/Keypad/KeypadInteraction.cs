@@ -8,10 +8,6 @@ public class KeypadInteraction : MonoBehaviour
     public FirstPersonController playerMovement;
     public GameObject promptUI;
     
-    [Header("Camera Settings")]
-    public Camera playerCamera;      // Main FPS camera
-    public Camera keypadCamera;      // Keypad minigame camera
-    
     [Header("Teleport Settings")]
     public string targetSceneName = "Storage";
     
@@ -23,12 +19,6 @@ public class KeypadInteraction : MonoBehaviour
     {
         promptUI.SetActive(false);
         keypadUI.gameObject.SetActive(false);
-        
-        // Make sure keypad camera is off at start
-        if (keypadCamera != null)
-        {
-            keypadCamera.gameObject.SetActive(false);
-        }
         
         // Check if already unlocked
         string unlockKey = $"Keypad_Unlocked_{targetSceneName}";
@@ -64,13 +54,6 @@ public class KeypadInteraction : MonoBehaviour
         // Disable player movement
         playerMovement.enabled = false;
         
-        // Switch cameras
-        if (playerCamera != null)
-            playerCamera.gameObject.SetActive(false);
-        
-        if (keypadCamera != null)
-            keypadCamera.gameObject.SetActive(true);
-        
         // Show keypad UI
         keypadUI.gameObject.SetActive(true);
         keypadUI.OpenKeypad(this);
@@ -89,13 +72,6 @@ public class KeypadInteraction : MonoBehaviour
         
         // Re-enable player movement
         playerMovement.enabled = true;
-        
-        // Switch cameras back
-        if (keypadCamera != null)
-            keypadCamera.gameObject.SetActive(false);
-        
-        if (playerCamera != null)
-            playerCamera.gameObject.SetActive(true);
         
         // Hide keypad UI
         keypadUI.gameObject.SetActive(false);
@@ -116,9 +92,6 @@ public class KeypadInteraction : MonoBehaviour
         PlayerPrefs.Save();
         
         Debug.Log("Keypad unlocked! Teleporting...");
-        
-        // RESTORE TIME before teleporting
-        Time.timeScale = 1f;
         
         // Wait a moment then teleport
         Invoke(nameof(TeleportToScene), 1f);
