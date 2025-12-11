@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using FMODUnity;
 
 public class KeypadUI : MonoBehaviour
 {
@@ -22,7 +23,27 @@ public class KeypadUI : MonoBehaviour
     private string currentInput = "";
     private bool isProcessing = false;
     private KeypadInteraction connectedKeypad;
+
+    [SerializeField] GameObject player;
+    [SerializeField] EventReference ClickEvent;
+    [SerializeField] EventReference FailedEvent;
+    [SerializeField] EventReference ApprovedEvent;
+
+    public void ClickSound()
+    {
+        RuntimeManager.PlayOneShotAttached(ClickEvent, player);
+    }
     
+    public void FailedSound()
+    {
+        RuntimeManager.PlayOneShotAttached(FailedEvent, player);
+    }
+
+    public void ApprovedSound()
+    {
+        RuntimeManager.PlayOneShotAttached(ApprovedEvent, player);
+    }
+
     void Start()
     {
         UpdateDisplay();
@@ -44,6 +65,7 @@ public class KeypadUI : MonoBehaviour
         {
             currentInput += number;
             UpdateDisplay();
+            ClickSound();
             
             // Auto-check when we reach max digits
             if (currentInput.Length == maxDigits)
@@ -60,6 +82,7 @@ public class KeypadUI : MonoBehaviour
         
         currentInput = "";
         UpdateDisplay();
+        ClickSound();
     }
     
     // Call this from the DEL button
@@ -71,6 +94,7 @@ public class KeypadUI : MonoBehaviour
         {
             currentInput = currentInput.Substring(0, currentInput.Length - 1);
             UpdateDisplay();
+            ClickSound();
         }
     }
     
@@ -110,6 +134,7 @@ public class KeypadUI : MonoBehaviour
     
     private IEnumerator ShowSuccess()
     {
+        ApprovedSound();
         // Flash green
         displayText.color = successColor;
         if (ledDisplayPanel != null)
@@ -129,6 +154,7 @@ public class KeypadUI : MonoBehaviour
     
     private IEnumerator ShowError()
     {
+        FailedSound();
         // Flash red multiple times
         for (int i = 0; i < 3; i++)
         {

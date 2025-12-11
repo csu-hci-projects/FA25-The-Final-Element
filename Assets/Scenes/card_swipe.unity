@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 321252706}
   - component: {fileID: 321252705}
   - component: {fileID: 321252708}
+  - component: {fileID: 321252709}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -550,7 +551,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321252704}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &321252706
 Camera:
   m_ObjectHideFlags: 0
@@ -661,6 +662,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &321252709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321252704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &385606175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1160,21 @@ MonoBehaviour:
   returnSceneName: 
   returnSpawnPointName: LabExitSpawn
   successSceneName: Lab1
+  WinEvent:
+    Guid:
+      Data1: 861268920
+      Data2: 1123810653
+      Data3: 1077399689
+      Data4: 1297034943
+    Path: event:/MiniGameSounds/Win
+  player: {fileID: 321252704}
+  LooseEvent:
+    Guid:
+      Data1: 775184995
+      Data2: 1253702202
+      Data3: 718016922
+      Data4: 1818311296
+    Path: event:/MiniGameSounds/LooseCardSwipe
 --- !u!1 &1165573100
 GameObject:
   m_ObjectHideFlags: 0

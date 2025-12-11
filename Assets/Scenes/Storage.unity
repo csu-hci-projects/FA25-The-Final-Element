@@ -1866,6 +1866,60 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &416024070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416024072}
+  - component: {fileID: 416024071}
+  m_Layer: 0
+  m_Name: FootstepsAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &416024071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416024070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1417b656a3c6c4b7e84418ec5702d326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootstepsAudioManager
+  FootstepEvent:
+    Guid:
+      Data1: -1934153245
+      Data2: 1110994483
+      Data3: 1638977416
+      Data4: -1323048976
+    Path: event:/FootstepsTile
+  rate: 0.75
+  player: {fileID: 2090796490}
+  controller: {fileID: 596169374}
+--- !u!4 &416024072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416024070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5, y: 0.24, z: -0.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &422820880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2372,14 @@ MonoBehaviour:
   fadeCanvas: {fileID: 1877912011}
   blackPanel: {fileID: 1554896538}
   fadeTime: 1.5
+  player: {fileID: 2090796490}
+  ExplosionEvent:
+    Guid:
+      Data1: 1564203915
+      Data2: 1268597125
+      Data3: 291970714
+      Data4: -428673603
+    Path: event:/MiniGameSounds/Explosion
 --- !u!61 &663090087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6168,6 +6230,21 @@ MonoBehaviour:
   - {fileID: 1996005524}
   endMessage: {fileID: 1767774549}
   endMessage2: {fileID: 663090085}
+  player: {fileID: 2090796490}
+  ConnectEvent:
+    Guid:
+      Data1: 1580229314
+      Data2: 1196575328
+      Data3: 182893494
+      Data4: 156229403
+    Path: event:/MiniGameSounds/Connect
+  FailedEvent:
+    Guid:
+      Data1: -1542975804
+      Data2: 1223720775
+      Data3: -305843274
+      Data4: 1455418045
+    Path: event:/MiniGameSounds/Loose
 --- !u!4 &1528536859
 Transform:
   m_ObjectHideFlags: 0
@@ -7628,6 +7705,14 @@ MonoBehaviour:
   fadeCanvas: {fileID: 1877912011}
   blackPanel: {fileID: 1554896538}
   fadeTime: 1.5
+  player: {fileID: 2090796490}
+  ExplosionEvent:
+    Guid:
+      Data1: 1564203915
+      Data2: 1268597125
+      Data3: 291970714
+      Data4: -428673603
+    Path: event:/MiniGameSounds/Explosion
 --- !u!4 &1815725784
 Transform:
   m_ObjectHideFlags: 0
@@ -8601,6 +8686,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4241c43fcb3c434dabbe7302e6fe91e, type: 3}
+--- !u!1 &2090796490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4060255946888844991, guid: 0f8b8d9de335c4c70903b2ab3e9e74bc, type: 3}
+  m_PrefabInstance: {fileID: 1397134895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2090992289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 31efae03f28fc784b87f1a32bafd5401, type: 3}
@@ -8939,3 +9029,4 @@ SceneRoots:
   - {fileID: 631717546}
   - {fileID: 2053543499}
   - {fileID: 795897950}
+  - {fileID: 416024072}

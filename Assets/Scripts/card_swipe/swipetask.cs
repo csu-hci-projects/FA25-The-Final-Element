@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using FMODUnity;
 
 public class swipetask : MonoBehaviour
 {
@@ -16,10 +17,24 @@ public class swipetask : MonoBehaviour
     [Header("Success Settings")]
     [SerializeField] private string successSceneName = "NextScene";
     
+    [Header("Audio")]
+    [SerializeField] GameObject player;
+    [SerializeField] EventReference WinEvent;
+    [SerializeField] EventReference LooseEvent;
     private int currentSwipepointIndex = 0;
     private float countdown = 0;
     private bool taskCompleted = false;
 
+    
+    public void PlayWinSound()
+    {
+        RuntimeManager.PlayOneShotAttached(WinEvent, player);
+    }
+
+    public void PlayLooseSound()
+    {
+        RuntimeManager.PlayOneShotAttached(LooseEvent, player);
+    }
     void Start()
     {
         // Unlock and show cursor for card dragging
@@ -47,6 +62,7 @@ public class swipetask : MonoBehaviour
         {
             currentSwipepointIndex = 0;
             Debug.Log("Error - Failed swipe sequence");
+            PlayLooseSound();
         }
     }
 
@@ -85,6 +101,8 @@ public class swipetask : MonoBehaviour
     private void LoadSuccessScene()
     {
         // Re-lock cursor before loading next scene
+        PlayWinSound();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         

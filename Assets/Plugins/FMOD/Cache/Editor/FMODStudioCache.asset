@@ -189,6 +189,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4601110210667612142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MiniGameSounds/Connect
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/MiniGameSounds/Connect
+  Guid:
+    Data1: 1580229314
+    Data2: 1196575328
+    Data3: 182893494
+    Data4: 156229403
+  Banks:
+  - {fileID: 2245966186531382247}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2984319796530198015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,10 +258,10 @@ MonoBehaviour:
   Path: ../../The Final Element /latest_build/SoundStuff/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639004901247124052
+  lastModified: 639009914860062010
   FileSizes:
   - Name: Desktop
-    Value: 1186
+    Value: 1316
   Exists: 1
 --- !u!114 &-1917084985062457799
 MonoBehaviour:
@@ -357,6 +384,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-463307041309003908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MiniGameSounds/LooseCardSwipe
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/MiniGameSounds/LooseCardSwipe
+  Guid:
+    Data1: 775184995
+    Data2: 1253702202
+    Data3: 718016922
+    Data4: 1818311296
+  Banks:
+  - {fileID: 2245966186531382247}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,13 +437,16 @@ MonoBehaviour:
   - {fileID: -564685660273332167}
   - {fileID: -7909649332379496027}
   - {fileID: -6562862036625073153}
+  - {fileID: -463307041309003908}
+  - {fileID: -4601110210667612142}
+  - {fileID: 2118075947387194356}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2245966186531382247}
   StringsBanks:
   - {fileID: -2059531501546501307}
   cacheVersion: 131857
-  cacheTime: 639004901247124052
+  cacheTime: 639009914860062010
   SerializableEventsDict:
   - key: event:/FootstepsTile
     index: 0
@@ -409,6 +466,12 @@ MonoBehaviour:
     index: 7
   - key: event:/MiniGameSounds/HoverUI
     index: 8
+  - key: event:/MiniGameSounds/LooseCardSwipe
+    index: 9
+  - key: event:/MiniGameSounds/Connect
+    index: 10
+  - key: event:/MiniGameSounds/Explosion
+    index: 11
 --- !u!114 &590412780330245400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +499,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 40
   Length: 9722
+--- !u!114 &2118075947387194356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MiniGameSounds/Explosion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/MiniGameSounds/Explosion
+  Guid:
+    Data1: 1564203915
+    Data2: 1268597125
+    Data3: 291970714
+    Data4: -428673603
+  Banks:
+  - {fileID: 2245966186531382247}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2245966186531382247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,10 +541,10 @@ MonoBehaviour:
   Path: ../../The Final Element /latest_build/SoundStuff/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639004901247106456
+  lastModified: 639009914860053126
   FileSizes:
   - Name: Desktop
-    Value: 878944
+    Value: 985120
   Exists: 1
 --- !u!114 &4272734498442635254
 MonoBehaviour:

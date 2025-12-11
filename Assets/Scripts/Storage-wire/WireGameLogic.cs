@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 
 public class WireGameLogic : MonoBehaviour
 {
@@ -8,7 +9,17 @@ public class WireGameLogic : MonoBehaviour
     public List<Wire> wires;
     public GameObject endMessage;
     public GameObject endMessage2;
+    [Header("Audio")]
+    [SerializeField] GameObject player;
+    [SerializeField] EventReference ConnectEvent;
+    [SerializeField] EventReference FailedEvent;
 
+    
+
+    public void FailedSound()
+    {
+        RuntimeManager.PlayOneShotAttached(FailedEvent, player);
+    }
 
     
     void Start()
@@ -43,7 +54,10 @@ public class WireGameLogic : MonoBehaviour
             else
             {
                 // WRONG → reset & shuffle
+                FailedSound();
                 ResetWires();
+
+                
             }
         }
     }

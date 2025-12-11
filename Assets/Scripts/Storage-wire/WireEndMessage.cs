@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 public class WireEndMessage : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,6 +14,13 @@ public class WireEndMessage : MonoBehaviour
     public GameObject fadeCanvas;   // black fade panel
     public GameObject blackPanel;    // Panel covering screen with CanvasGroup
     public float fadeTime = 1.5f; 
+    [SerializeField] GameObject player;
+    [SerializeField] EventReference ExplosionEvent;
+
+    public void ExplosionSound()
+    {
+        RuntimeManager.PlayOneShotAttached(ExplosionEvent, player);
+    }
     void Start()
     {
         welldonemessage.SetActive(false);
@@ -58,6 +66,7 @@ public class WireEndMessage : MonoBehaviour
 
         // Show explosion UI on top of black fade
         explosionUI.SetActive(true);
+        ExplosionSound();
         explosionUI.transform.SetAsLastSibling();
     }
     
